@@ -126,6 +126,32 @@ public interface PurpleBoxUserInterface {
 	   *
 	   */
 	   public Node search(Node root, int metaScore)
-
+		   
+	   /**
+	   * Traverse and print each element in the BST.
+	   *
+	   * @param String name
+	   * @param Node n
+	   *
+	   */
+	   public void inOrder(Node n, String name)
+		   
+           /**
+	   * Traverse and print each element in the BST.
+	   *
+	   * @param Product movie
+	   * @param Node n
+	   *
+	   */
+	   public void inOrder(Node n, Product movie)
+		   
+           /**
+	   * Traverse and print each element in the BST.
+	   *
+	   * @param Product game
+	   * @param Node n
+	   *
+	   */
+	   public void inOrder(Node n, Product game)
 	
 	}
