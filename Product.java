@@ -159,6 +159,9 @@ public class Product {
 		System.out.print("---------------------------------------/n"
 				+ "Name: " + this.name 
 				+ "/nDiscType: " + this.discType
+				+ "/nGenre: " + this.genre
+				+ "/nRelease Date: " + this.releaseDate
+				+ "/nmetaScore: " + this.metaScore
 				+ "/nPrice: " + this.price
 				+ "/nisAvailable" + this.isAvailable
 				+ "/n--------------------------------------------")
