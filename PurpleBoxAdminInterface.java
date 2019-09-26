@@ -2,9 +2,9 @@ package com.David.maven.PurpleBox;
 
 public interface PurpleBoxAdminInterface {
 	
-	public void addMovieToInventory()
+	public void addProductToInventory()
 	
-	public void removeMovieFromInventory()
+	public void removeProductFromInventory()
 	
 	public void setPriceDVD(DVD)
 	
