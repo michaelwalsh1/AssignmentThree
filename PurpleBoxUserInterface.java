@@ -5,11 +5,13 @@ public interface PurpleBoxUserInterface {
 	   /**
 	   * This method adds a product to the user's cart.
 	   *
-	   * @param ArrayList
-	   * @param ArrayList
-	   * @param Product
+	   * @param ArrayList<Product> cart
+	   * @param Product someProduct to be added to User's cart.
+	   * 
+	   * @require Product must exist.
+	   * @ensure Product is added to User's cart.
 	   */
-	   public void addToCart( ArrayList<Product> cart, ArrayList<Product> inventory, Product someProduct );
+	   public void addToCart( ArrayList<Product> cart, Product someProduct );
 
 	   /**
 	   * Removes the movie.
