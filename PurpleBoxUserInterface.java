@@ -3,9 +3,10 @@ package com.David.maven.PurpleBox;
 public interface PurpleBoxUserInterface {
 
 	   /**
-	   * This method adds a movie to the user's cart.
+	   * This method adds a product to the user's cart.
 	   *
-	   * @param 
+	   * @param ArrayList
+	   * @param Product
 	   */
 	   public void addToCart( ArrayList<Product> cart, Product someProduct );
 
