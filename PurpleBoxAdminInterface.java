@@ -8,26 +8,26 @@ public interface PurpleBoxAdminInterface {
 	   public interface PurpleBoxUserInterface {
 
 	       /**
-	       * Adds the movie.
+	       * This method allows the admin to add a movie to the purplebox.
 	       *
 	       * @param movie the movie
 	       */
 	       public void addMovie(Movie movie);
 
 	       /**
-	       * Removes the movie.
+	       * This method allows the admin to remove a movie.
 	       *
 	       * @param 
 	       */
 	       public void removeMovie(Movie movie);
 
 	       /**
-	       * Removes the all movie.
+	       * This method allows the admin to remove all movies from the purplebox.
 	       */
 	       public void removeAllMovie();
 
 	       /**
-	       * Checks if is movie available.
+	       * This method checks if a movie is available.
 	       *
 	       * @param 
 	       * @return true, if movie is available
