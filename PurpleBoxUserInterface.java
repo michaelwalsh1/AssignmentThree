@@ -25,7 +25,12 @@ public interface PurpleBoxUserInterface {
 	   public void removeFromCart( ArrayList<Product> cart, Product someProduct );
 
 	   /**
-	   * Removes the all movie.
+	   * Removes all products from User's cart.
+	   *
+	   * @param ArrayList<Product> cart
+	   * 
+	   * @require Number of products in cart to be >= 0.
+	   * @ensure User's cart is empty.
 	   */
 	   public void emptyCart( ArrayList<Product> cart );
 
