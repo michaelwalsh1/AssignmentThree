@@ -38,8 +38,8 @@ public interface PurpleBoxUserInterface {
 	   * Checks if product is available.
 	   *
 	   * @param Product someProduct
-	   * 
-	   * @return true, if product is available
+	   * @return boolean, if someProduct is available
+	   * @ensure result == (true || false)
 	   */
 	   public boolean isProductAvailable(Product someProduct);
 
