@@ -10,30 +10,49 @@ public interface PurpleBoxAdminInterface {
 	       /**
 	       * This method allows the admin to add a product to the purplebox.
 	       *
-	       * @param some product
+	       * @param Product to be added to inventory BST.
 	       */
 	       public void addProductToInventory(Product someProduct);
 
 	       /**
 	       * This method allows the admin to remove a product from the purplebox.
 	       *
-	       * @param 
+	       * @param Product to be removed from inventory BST.
 	       */
 	       public void removeProductFromInventory(Product someProduct);
 
 	       /**
-	       * This method allows the admin to remove all movies from the purplebox.
+	       * This method allows the admin to remove all Products from the purplebox.
+	       * 
+	       * @ensure all Products removed from inventory BST.
 	       */
 	       public void removeAllFromInventory();
 
 		   
 	       /**
-	       * This method allows thse admin to change the price of any product.
+	       * This method allows the admin to change the price of any Product.
 	       *
-	       * @param item
+	       * @param BST inventory of all Products.
+	       * @param Movie price to be changed.
 	       */
-	       public void changePrice(Product someProduct);
-	      
+	       public void changeDVDPrice(BST inventory, double newPrice);
+	       
+	       /**
+	       * This method allows the admin to change the price of any Product.
+	       *
+	       * @param BST inventory of all Products.
+	       * @param Movie price to be changed.
+	       */
+	       public void changeBluRayPrice(BST inventory, double newPrice);
+		   
+	       /**
+	       * This method allows the admin to change the price of any Product.
+	       *
+	       * @param BST inventory of all Products.
+	       * @param Game price to be changed.
+	       */
+	       public void changeGamePrice(BST inventory, double newPrice);
+		   
 	       /**
 	       * This method allows the admin to make changes to the volume discount.
 	       *
