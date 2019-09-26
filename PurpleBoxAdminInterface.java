@@ -35,27 +35,6 @@ public interface PurpleBoxAdminInterface {
 	       public boolean isMovieAvailable(Movie movie);
 
 	       /**
-	       * Checkout.
-	       *
-	       * @param 
-	       */
-	       //public void checkout(String email);
-
-	       /**
-	       * Make payment.
-	       *
-	       * @param 
-	       */
-	       //public void makePayment(String method);
-
-	       /**
-	       * Return movies.
-	       *
-	       * @return the array list
-	       */
-	       public ArrayList<Movie> returnMovies();
-
-	       /**
 	       * Apply promo code.
 	       *
 	       * @param 
@@ -98,14 +77,7 @@ public interface PurpleBoxAdminInterface {
 	       * @return the array list
 	       */
 	       public ArrayList<Game> returnGames();
-
-	       /**
-	       * Check user account.
-	       *
-	       * @return the array list
-	       */
-	       public ArrayList<Item> checkUserAccount();
-	      
+		   
 	       /**
 	       * Adds the movie to inventory.
 	       *
@@ -114,14 +86,14 @@ public interface PurpleBoxAdminInterface {
 	       public void addMovieToInventory(Movie movie);
 	      
 	       /**
-	       * Removie movie to inventory.
+	       * Remove movie to inventory.
 	       *
 	       * @param 
 	       */
 	       public void removieMovieToInventory(Movie movie);
 	      
 	       /**
-	       * This method allows th user to change the price of any product.
+	       * This method allows thse admin to change the price of any product.
 	       *
 	       * @param item
 	       */
