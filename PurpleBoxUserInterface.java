@@ -14,12 +14,12 @@ public interface PurpleBoxUserInterface {
 	   *
 	   * @param 
 	   */
-	   public void removeMovie(Movie movie);
+	   public void removeFromCart( ArrayList<Product> cart, Product someProduct );
 
 	   /**
 	   * Removes the all movie.
 	   */
-	   public void removeAllMovie();
+	   public void emptyCart( ArrayList<Product> cart );
 
 	   /**
 	   * Checks if is movie available.
