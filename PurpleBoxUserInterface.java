@@ -73,7 +73,59 @@ public interface PurpleBoxUserInterface {
 	   */
 	   public double applyPromoCode(double totalCost, String code);
 	
-	   
+	   /**
+	   * Search product name in BST alphabetically.
+	   *
+	   * @param String name
+	   * @param Node n
+	   *
+	   */
+	   public String smallTitle(String name, Node n)
+	
+	   /**
+	   * Search for product within BST by name.
+	   *
+	   * @param String name
+	   * @param Node root
+	   *
+	   */
+	   public Node search(Node root, String name)
+	
+           /**
+	   * Search for product within BST by genre.
+	   *
+	   * @param String genre
+	   * @param Node root
+	   *
+	   */
+	   public Node search(Node root, String genre)
+		   
+           /**
+	   * Search for product within BST by format.
+	   *
+	   * @param String format
+	   * @param Node root
+	   *
+	   */
+	   public Node search(Node root, String format)
+		   
+           /**
+	   * Search for product within BST by releaseDate.
+	   *
+	   * @param String releaseDate
+	   * @param Node root
+	   *
+	   */
+	   public Node search(Node root, String releaseDate)
+		   
+	   /**
+	   * Search for product within BST by metaScore.
+	   *
+	   * @param int metaScore
+	   * @param Node root
+	   *
+	   */
+	   public Node search(Node root, int metaScore)
 
 	
 	}
