@@ -12,19 +12,19 @@ public class Product {
 	public Product() {
 		this.name = "";
 		this.genre = "";
+		this.discType = "";
 		this.releaseDate = "";
 		this.metaScore = 0;
-		this.discType = "";
 		this.price = 0.0;
 		this.isAvailable = false;
 	}
 
-	public Product(String name, String discType, double price, boolean isAvailable) {
+	public Product(String name, String genre, String discType, String releaseDate, int metaScore, double price, boolean isAvailable) {
 		this.name = name;
 		this.genre = genre;
+		this.discType = discType;
 		this.releaseDate = releaseDate;
 		this.metaScore = metaScore;
-		this.discType = discType;
 		this.price = price;
 		this.isAvailable = isAvailable;
 	}
