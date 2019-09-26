@@ -3,7 +3,7 @@ package com.David.maven.PurpleBox;
 public interface PurpleBoxUserInterface {
 
 	   /**
-	   * Adds the movie.
+	   * This method adds a movie to the user's cart.
 	   *
 	   * @param 
 	   */
