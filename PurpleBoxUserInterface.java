@@ -41,14 +41,15 @@ public interface PurpleBoxUserInterface {
 	   * @return boolean, if someProduct is available
 	   * @ensure result == (true || false)
 	   */
-	   public boolean isProductAvailable(Product someProduct);
+	   public boolean isMovieAvailable(Product someMovie);
 
 	   /**
-	   * Checkout.
+	   * Checkout products from User's cart.
 	   *
-	   * @param 
+	   * @param ArrayList<Product> cart
+	   *
 	   */
-	   public void checkout(String email);
+	   public void checkout(ArrayList<Product> cart);
 
 	   /**
 	   * Make payment.
@@ -58,60 +59,21 @@ public interface PurpleBoxUserInterface {
 	   public void makePayment(String method);
 
 	   /**
-	   * Return movies.
+	   * Return products.
 	   *
 	   * @return the array list
 	   */
-	   public ArrayList<Movie> returnMovies();
+	   public ArrayList<Product> returnProduct();
 
 	   /**
 	   * Apply promo code.
 	   *
-	   * @param apply the code
+	   * @param String code
+	   * @return double totalCost
 	   */
-	   public void applyPromoCode(String code);
+	   public double applyPromoCode(double totalCost, String code);
+	
+	   
 
-	   /**
-	   * Adds the game.
-	   *
-	   * @param 
-	   * @param 
-	   */
-	   public void addGame(Game game, String type);
-
-	   /**
-	   * Removes the game.
-	   *
-	   * @param 
-	   * @param 
-	   */
-	   public void removeGame(Game game, String type);
-
-	   /**
-	   * Removes all games.
-	   */
-	   public void removeAllGame();
-
-	   /**
-	   * Checks if is game available.
-	   *
-	   * @param type of game
-	   * @return true, if is game available
-	   */
-	   public boolean isGameAvailable(Game game, String type);
-
-	   /**
-	   * Return games.
-	   *
-	   * @return the array list
-	   */
-	   public ArrayList<Game> returnGames();
-
-	   /**
-	   * Check user account.
-	   *
-	   * @return the array list
-	   */
-	   public ArrayList<Item> checkUserAccount();
-
+	
 	}
