@@ -17,7 +17,7 @@ public interface PurpleBoxAdminInterface {
 	       /**
 	       * Removes the movie.
 	       *
-	       * @param movie the movie
+	       * @param 
 	       */
 	       public void removeMovie(Movie movie);
 
@@ -29,8 +29,8 @@ public interface PurpleBoxAdminInterface {
 	       /**
 	       * Checks if is movie available.
 	       *
-	       * @param movie the movie
-	       * @return true, if is movie available
+	       * @param 
+	       * @return true, if movie is available
 	       */
 	       public boolean isMovieAvailable(Movie movie);
 
@@ -58,23 +58,23 @@ public interface PurpleBoxAdminInterface {
 	       /**
 	       * Apply promo code.
 	       *
-	       * @param code the code
+	       * @param 
 	       */
 	       public void applyPromoCode(String code);
 
 	       /**
 	       * Adds the game.
 	       *
-	       * @param game the game
-	       * @param type the type
+	       * @param 
+	       * @param 
 	       */
 	       public void addGame(Game game, String type);
 
 	       /**
 	       * Removes the game.
 	       *
-	       * @param game the game
-	       * @param type the type
+	       * @param 
+	       * @param 
 	       */
 	       public void removeGame(Game game, String type);
 
@@ -86,8 +86,8 @@ public interface PurpleBoxAdminInterface {
 	       /**
 	       * Checks if is game available.
 	       *
-	       * @param game the game
-	       * @param type the type
+	       * @param 
+	       * @param 
 	       * @return true, if is game available
 	       */
 	       public boolean isGameAvailable(Game game, String type);
@@ -144,14 +144,14 @@ public interface PurpleBoxAdminInterface {
 	       /**
 	       * Disable unit.
 	       *
-	       * @param item the item
+	       * @param 
 	       */
 	       public void disableUnit(Item item);
 	      
 	       /**
 	       * Enable unit.
 	       *
-	       * @param item the item
+	       * @param 
 	       */
 	       public void enableUnit(Item item);
 	}
