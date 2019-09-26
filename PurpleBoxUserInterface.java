@@ -7,7 +7,7 @@ public interface PurpleBoxUserInterface {
 	   *
 	   * @param 
 	   */
-	   public void addMovie(Movie movie);
+	   public void addToCart( ArrayList<Product> cart, Product someProduct );
 
 	   /**
 	   * Removes the movie.
