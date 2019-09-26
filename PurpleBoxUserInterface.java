@@ -14,9 +14,13 @@ public interface PurpleBoxUserInterface {
 	   public void addToCart( ArrayList<Product> cart, Product someProduct );
 
 	   /**
-	   * Removes the movie.
+	   * This method removes a product from the user's cart.
 	   *
-	   * @param 
+	   * @param ArrayList<Product> cart
+	   * @param Product someProduct to be removed from User's cart.
+	   *
+	   * @require Product isAvailable
+	   * @ensure Product is removed from User's cart.
 	   */
 	   public void removeFromCart( ArrayList<Product> cart, Product someProduct );
 
