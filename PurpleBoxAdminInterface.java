@@ -8,14 +8,14 @@ public interface PurpleBoxAdminInterface {
 	   public interface PurpleBoxUserInterface {
 
 	       /**
-	       * This method allows the admin to add a movie to the purplebox.
+	       * This method allows the admin to add a product to the purplebox.
 	       *
-	       * @param movie the movie
+	       * @param some product
 	       */
-	       public void addMovie(Movie movie);
+	       public void addProductToInventory(Product someProduct);
 
 	       /**
-	       * This method allows the admin to remove a movie.
+	       * This method allows the admin to remove a product from the purplebox.
 	       *
 	       * @param 
 	       */
@@ -39,14 +39,14 @@ public interface PurpleBoxAdminInterface {
 	       *
 	       * @param 
 	       */
-	       public void checkout(String email);
+	       //public void checkout(String email);
 
 	       /**
 	       * Make payment.
 	       *
 	       * @param 
 	       */
-	       public void makePayment(String method);
+	       //public void makePayment(String method);
 
 	       /**
 	       * Return movies.
@@ -121,14 +121,14 @@ public interface PurpleBoxAdminInterface {
 	       public void removieMovieToInventory(Movie movie);
 	      
 	       /**
-	       * Change price.
+	       * This method allows th user to change the price of any product.
 	       *
-	       * @param 
+	       * @param item
 	       */
 	       public void changePrice(Item item);
 	      
 	       /**
-	       * Volume discount.
+	       * This method allows the admin to make changes to the volume discount.
 	       *
 	       * @param 
 	       */
@@ -142,14 +142,14 @@ public interface PurpleBoxAdminInterface {
 	       public void addPromoCodes(ArrayList<String> codes);
 	      
 	       /**
-	       * Disable unit.
+	       * This method allows the admin to disable the entire unit.
 	       *
 	       * @param 
 	       */
 	       public void disableUnit(Item item);
 	      
 	       /**
-	       * Enable unit.
+	       * This method allows the admin to enable the entire unit.
 	       *
 	       * @param 
 	       */
