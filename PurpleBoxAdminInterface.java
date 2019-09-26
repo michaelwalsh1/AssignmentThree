@@ -54,16 +54,16 @@ public interface PurpleBoxAdminInterface {
 	       public void changeGamePrice(BST inventory, double newPrice);
 		   
 	       /**
-	       * This method allows the admin to make changes to the volume discount.
+	       * This method allows the admin to make set the volume discount.
 	       *
-	       * @param 
+	       * @param double discount is percentage (ex. 0.5 for 50%) of discount.
 	       */
-	       public void volumeDiscount(double amount);
+	       public void setVolumeDiscount(double discount);
 	      
 	       /**
 	       * Adds the promo codes.
 	       *
-	       * @param 
+	       * @param ArrayList<String> of promo codes.
 	       */
 	       public void setPromoCodes(ArrayList<String> codes);
 	      
@@ -72,12 +72,12 @@ public interface PurpleBoxAdminInterface {
 	       *
 	       * @param 
 	       */
-	       public void disableUnit(Item item);
+	       public void disableUnit();
 	      
 	       /**
 	       * This method allows the admin to enable the entire unit.
 	       *
 	       * @param 
 	       */
-	       public void enableUnit(Item item);
+	       public void enableUnit();
 	}
