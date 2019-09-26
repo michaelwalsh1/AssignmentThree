@@ -35,12 +35,13 @@ public interface PurpleBoxUserInterface {
 	   public void emptyCart( ArrayList<Product> cart );
 
 	   /**
-	   * Checks if is movie available.
+	   * Checks if product is available.
 	   *
-	   * @param 
-	   * @return true, if is movie available
+	   * @param Product someProduct
+	   * 
+	   * @return true, if product is available
 	   */
-	   public boolean isMovieAvailable(Movie movie);
+	   public boolean isProductAvailable(Product someProduct);
 
 	   /**
 	   * Checkout.
