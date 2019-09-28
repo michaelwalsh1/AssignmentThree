@@ -81,7 +81,7 @@ public interface PurpleBoxUserInterface {
 	   *
 	   * @returns the product list alphabetically.
 	   */
-	   public ArrayList<Product> sortByProductName(String name, ArrayList<Product> allProducts)
+	   public ArrayList<Product> sortByProductName(ArrayList<Product> allProducts, String name)
 	
 	   /**
 	   * Search for product within ArrayList<Product> by name.
@@ -121,42 +121,18 @@ public interface PurpleBoxUserInterface {
 	   *
 	   * @returns a list of products of the desired releaseDate.
 	   */
-	   public ArrayList<Product> searchByReleaseDate(Node root, String releaseDate)
+	   public ArrayList<Product> searchByReleaseDate(ArrayList<Product> allProducts, String releaseDate)
 		   
 	   /**
-	   * Search for product within BST by metaScore.
+	   * Search for product within ArrayList<Product> by  metaScore.
 	   *
 	   * @param int metaScore
-	   * @param Node root
+	   * @param ArrayList<Product>
 	   *
+	   *  @returns a list of products of the desired metaScore.
 	   */
-	   public Node searchByMetaScore(ArrayList<Product>, int metaScore)
+	   public ArrayList<Product> searchByMetaScore(ArrayList<Product> allProducts, int metaScore)
 		   
-	   /**
-	   * Traverse and print each element in the BST.
-	   *
-	   * @param String name
-	   * @param Node n
-	   *
-	   */
-	   public void inOrder(Node n, String name)
-		   
-           /**
-	   * Traverse and print each element in the BST.
-	   *
-	   * @param Product movie
-	   * @param Node n
-	   *
-	   */
-	   public void inOrder(Node n, Product movie)
-		   
-           /**
-	   * Traverse and print each element in the BST.
-	   *
-	   * @param Product game
-	   * @param Node n
-	   *
-	   */
-	   public void inOrder(Node n, Product game)
+	
 	
 	}
