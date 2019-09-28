@@ -10,13 +10,7 @@ public class Product {
 	private boolean isAvailable;
 
 	public Product() {
-		this.name = "";
-		this.genre = "";
-		this.discType = "";
-		this.releaseDate = "";
-		this.metaScore = 0;
-		this.price = 0.0;
-		this.isAvailable = false;
+		
 	}
 
 	public Product(String name, String genre, String discType, String releaseDate, int metaScore, double price, boolean isAvailable) {
