@@ -2,55 +2,37 @@ package com.David.maven.PurpleBox;
 
 public interface PurpleBoxAdminInterface {
 	
-	/**
-	* The Interface PurpleBoxUserInterface.
-	*/
-	public interface PurpleBoxUserInterface {
-
+	
 		/**
 		* This method allows the admin to add a product to the purplebox.
 		*
-		* @param Product to be added to inventory BST.
+		* @param Product to be added to ArrayList<Product>.
 		*/
 		public void addProductToInventory(Product someProduct);
 		
 		/**
 		* This method allows the admin to remove a product from the purplebox.
 		*
-		* @param Product to be removed from inventory BST.
+		* @param Product to be removed from inventory ArrayList<Product>.
+		* @returns true if product was removed.
 		*/
-		public void removeProductFromInventory(Product someProduct);
+		public boolean removeProductFromInventory(Product someProduct);
 		
 		/**
 		* This method allows the admin to remove all Products from the purplebox.
 		* 
-		* @ensure all Products removed from inventory BST.
+		* @ensure all Products removed from ArrayList<Product>.
 		*/
 		public void removeAllFromInventory();
+	
 		
 		/**
 		* This method allows the admin to change the price of any Product.
 		*
-		* @param BST inventory of all Products.
-		* @param Movie price to be changed.
-		*/
-		public void changeDVDPrice(BST inventory, double newPrice);
-		
-		/**
-		* This method allows the admin to change the price of any Product.
-		*
-		* @param BST inventory of all Products.
-		* @param Movie price to be changed.
-		*/
-		public void changeBluRayPrice(BST inventory, double newPrice);
-		
-		/**
-		* This method allows the admin to change the price of any Product.
-		*
-		* @param BST inventory of all Products.
+		* @param ArrayList<Product> of all Products.
 		* @param Game price to be changed.
 		*/
-		public void changeGamePrice(BST inventory, double newPrice);
+		public void changePrice(Product product, double newPrice);
 		
 		/**
 		* This method allows the admin to make set the volume discount.
