@@ -74,49 +74,54 @@ public interface PurpleBoxUserInterface {
 	   public double applyPromoCode(double totalCost, String code);
 	
 	   /**
-	   * Search product name in BST alphabetically.
+	   * Search product name in ArrayList<Product> alphabetically.
 	   *
 	   * @param String name
-	   * @param Node n
+	   * @param ArrayList<Product> productList
 	   *
+	   * @returns the product list alphabetically.
 	   */
-	   public String smallTitle(String name, Node n)
+	   public ArrayList<Product> sortByProductName(String name, ArrayList<Product> allProducts)
 	
 	   /**
-	   * Search for product within BST by name.
+	   * Search for product within ArrayList<Product> by name.
 	   *
 	   * @param String name
-	   * @param Node root
+	   * @param ArrayList<Product>
 	   *
+	   * @returns the found product object.
 	   */
-	   public Node search(Node root, String name)
+	   public Product searchByName(ArrayList<Product> allProducts, String name)
 	
            /**
-	   * Search for product within BST by genre.
+	   * Search for product within ArrayList<Product> by genre.
 	   *
 	   * @param String genre
-	   * @param Node root
+	   * @param ArrayList<Product>
 	   *
+	   * @returns a list of products of the desired genre
 	   */
-	   public Node search(Node root, String genre)
+	   public ArrayList<Product> searchByGenre(ArrayList<Product> allProducts, String genre)
 		   
            /**
-	   * Search for product within BST by format.
+	   * Search for product within ArrayList<Product> by format.
 	   *
 	   * @param String format
-	   * @param Node root
+	   * @param ArrayList<Product>
 	   *
+	   * @returns a list of products of the desired format.
 	   */
-	   public Node search(Node root, String format)
+	   public ArrayList<Product> searchByFormat(ArrayList<Product> allProducts, String format)
 		   
            /**
-	   * Search for product within BST by releaseDate.
+	   * Search for product within ArrayList<Product> by releaseDate.
 	   *
 	   * @param String releaseDate
 	   * @param Node root
 	   *
+	   * @returns a list of products of the desired releaseDate.
 	   */
-	   public Node search(Node root, String releaseDate)
+	   public ArrayList<Product> searchByReleaseDate(Node root, String releaseDate)
 		   
 	   /**
 	   * Search for product within BST by metaScore.
@@ -125,7 +130,7 @@ public interface PurpleBoxUserInterface {
 	   * @param Node root
 	   *
 	   */
-	   public Node search(Node root, int metaScore)
+	   public Node searchByMetaScore(ArrayList<Product>, int metaScore)
 		   
 	   /**
 	   * Traverse and print each element in the BST.
