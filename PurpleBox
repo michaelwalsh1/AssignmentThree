@@ -1,0 +1,47 @@
+package com.David.maven.PurpleBox;
+
+import java.util.ArrayList;
+
+public class PurpleBox implements PurpleBoxAdminInterface {
+
+	public void addProductToInventory(Product someProduct) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public boolean removeProductFromInventory(Product someProduct) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void removeAllFromInventory() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void changePrice(Product product, double newPrice) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setVolumeDiscount(double discount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setPromoCodes(ArrayList<String> codes) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void disableUnit() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void enableUnit() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
