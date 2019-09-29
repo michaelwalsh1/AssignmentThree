@@ -2,7 +2,63 @@ package com.David.maven.PurpleBox;
 
 import java.util.ArrayList;
 
-public class PurpleBox implements PurpleBoxAdminInterface {
+public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterface {
+
+	public void addToCart(ArrayList<Product> cart, Product someProduct) {
+		
+	}
+
+	public void removeFromCart(ArrayList<Product> cart, Product someProduct) {
+		
+	}
+
+	public void emptyCart(ArrayList<Product> cart) {
+		
+	}
+
+	public boolean isProductAvailable(Product someProduct) {
+		return false;
+	}
+
+	public void checkout(ArrayList<Product> cart) {
+		
+	}
+
+	public void makePayment(String method) {
+		
+	}
+
+	public ArrayList<Product> returnProduct() {
+		return null;
+	}
+
+	public double applyPromoCode(double totalCost, String code) {
+		return 0;
+	}
+
+	public ArrayList<Product> sortByProductName(ArrayList<Product> allProducts, String name) {
+		return null;
+	}
+
+	public Product searchByName(ArrayList<Product> allProducts, String name) {
+		return null;
+	}
+
+	public ArrayList<Product> searchByGenre(ArrayList<Product> allProducts, String genre) {
+		return null;
+	}
+
+	public ArrayList<Product> searchByFormat(ArrayList<Product> allProducts, String format) {
+		return null;
+	}
+
+	public ArrayList<Product> searchByReleaseDate(ArrayList<Product> allProducts, String releaseDate) {
+		return null;
+	}
+
+	public ArrayList<Product> searchByMetaScore(ArrayList<Product> allProducts, int metaScore) {
+		return null;
+	}
 
 	public void addProductToInventory(Product someProduct) {
 		// TODO Auto-generated method stub
