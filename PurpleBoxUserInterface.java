@@ -3,7 +3,7 @@ package com.David.maven.PurpleBox;
 import java.util.ArrayList;
 
 public interface PurpleBoxUserInterface {
-	/**
+	  /**
 	   * This method adds a product to the user's cart.
 	   *
 	   * @param ArrayList<Product> cart
@@ -14,7 +14,7 @@ public interface PurpleBoxUserInterface {
 	   */
 	   public void addToCart( ArrayList<Product> cart, Product someProduct );
 
-	   /**
+	  /**
 	   * This method removes a product from the user's cart.
 	   *
 	   * @param ArrayList<Product> cart
@@ -25,7 +25,7 @@ public interface PurpleBoxUserInterface {
 	   */
 	   public void removeFromCart( ArrayList<Product> cart, Product someProduct );
 
-	   /**
+	  /**
 	   * Removes all products from User's cart.
 	   *
 	   * @param ArrayList<Product> cart
@@ -35,7 +35,7 @@ public interface PurpleBoxUserInterface {
 	   */
 	   public void emptyCart( ArrayList<Product> cart );
 
-	   /**
+	  /**
 	   * Checks if product is available.
 	   *
 	   * @param Product someProduct
@@ -52,21 +52,21 @@ public interface PurpleBoxUserInterface {
 	   */
 	   public void checkout(ArrayList<Product> cart);
 
-	   /**
+	  /**
 	   * Make payment.
 	   *
 	   * @param getPaymentInformation
 	   */
 	   public void makePayment(String method);
 
-	   /**
+	  /**
 	   * Return products.
 	   *
 	   * @return the array list
 	   */
 	   public ArrayList<Product> returnProduct();
 
-	   /**
+	  /**
 	   * Apply promo code.
 	   *
 	   * @param String code
@@ -74,17 +74,34 @@ public interface PurpleBoxUserInterface {
 	   */
 	   public double applyPromoCode(double totalCost, String code);
 	
-	   /**
-	   * Search product name in ArrayList<Product> alphabetically.
+	  /**
+	   * Sort ArrayList<Product> alphabetically by name.
 	   *
-	   * @param String name
 	   * @param ArrayList<Product> productList
 	   *
-	   * @returns the product list alphabetically.
+	   * @ensure the product list sorted alphabetically by name.
 	   */
-	   public ArrayList<Product> sortByProductName(ArrayList<Product> allProducts, String name);
+	   public void sortByName(ArrayList<Product> allProducts);
 	
-	   /**
+	  /**
+	   * Sort ArrayList<Product> chronologically by releaseDate.
+	   *
+	   * @param ArrayList<Product> productList
+	   *
+	   * @ensure the product list sorted chronologically by releaseDate.
+	   */
+	   public void sortByReleaseDate(ArrayList<Product> allProducts);
+	
+	  /**
+	   * Sort ArrayList<Product> numerically by metaScore.
+	   *
+	   * @param ArrayList<Product> productList
+	   *
+	   * @ensure the product list sorted numerically by metaScore.
+	   */
+	   public void sortByMetaScore(ArrayList<Product> allProducts);
+	
+	  /**
 	   * Search for product within ArrayList<Product> by name.
 	   *
 	   * @param String name
@@ -94,43 +111,43 @@ public interface PurpleBoxUserInterface {
 	   */
 	   public Product searchByName(ArrayList<Product> allProducts, String name);
 	
-         /**
+          /**
 	   * Search for product within ArrayList<Product> by genre.
 	   *
 	   * @param String genre
 	   * @param ArrayList<Product>
 	   *
-	   * @returns a list of products of the desired genre
+	   * @return a list of products of the desired genre
 	   */
 	   public ArrayList<Product> searchByGenre(ArrayList<Product> allProducts, String genre);
 		   
-         /**
+          /**
 	   * Search for product within ArrayList<Product> by format.
 	   *
 	   * @param String format
 	   * @param ArrayList<Product>
 	   *
-	   * @returns a list of products of the desired format.
+	   * @return a list of products of the desired format.
 	   */
 	   public ArrayList<Product> searchByFormat(ArrayList<Product> allProducts, String format);
-		   
-         /**
+	
+          /**
 	   * Search for product within ArrayList<Product> by releaseDate.
 	   *
 	   * @param String releaseDate
 	   * @param Node root
 	   *
-	   * @returns a list of products of the desired releaseDate.
+	   * @return a list of products of the desired releaseDate.
 	   */
 	   public ArrayList<Product> searchByReleaseDate(ArrayList<Product> allProducts, String releaseDate);
 		   
-	   /**
+	  /**
 	   * Search for product within ArrayList<Product> by  metaScore.
 	   *
 	   * @param int metaScore
 	   * @param ArrayList<Product>
 	   *
-	   *  @returns a list of products of the desired metaScore.
+	   * @return ArrayList<Product> of products of the desired metaScore.
 	   */
 	   public ArrayList<Product> searchByMetaScore(ArrayList<Product> allProducts, int metaScore);
 		   
