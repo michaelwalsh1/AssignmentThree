@@ -27,11 +27,7 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 	public void makePayment(String method) {
 		
 	}
-
-	public ArrayList<Product> returnProduct() {
-		return null;
-	}
-
+	
 	public double applyPromoCode(double totalCost, String code) {
 		return 0;
 	}
@@ -48,11 +44,18 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 		
 	}
 	
+	public ArrayList<Product> viewAllMovies(ArrayList<Product> allProducts) {
+		return null;
+	}
+	
+	public ArrayList<Product> viewAllGames(ArrayList<Product> allProducts) {
+		return null;
+	}
+	
 	public Product searchByName(ArrayList<Product> allProducts, String name) {
 		for(Product info: allProducts) {
         		System.out.println(info.getName());
         	}
-	
 	}
 
 	public ArrayList<Product> searchByGenre(ArrayList<Product> allProducts, String genre) {
