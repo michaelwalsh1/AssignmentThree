@@ -55,7 +55,7 @@ public interface PurpleBoxUserInterface {
 	   /**
 	   * Make payment.
 	   *
-	   * @param 
+	   * @param getPaymentInformation
 	   */
 	   public void makePayment(String method);
 
