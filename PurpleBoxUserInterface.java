@@ -44,7 +44,7 @@ public interface PurpleBoxUserInterface {
 	   */
 	   public boolean isProductAvailable(Product someMovie);
 
-	   /**
+	  /**
 	   * Checkout Products from User's cart.
 	   *
 	   * @param ArrayList<Product> cart
