@@ -48,7 +48,8 @@ public interface PurpleBoxUserInterface {
 	   * Checkout products from User's cart.
 	   *
 	   * @param ArrayList<Product> cart
-	   *
+	   * 
+	   * @ensure commencement of all methods related to checkout.
 	   */
 	   public void checkout(ArrayList<Product> cart);
 
@@ -62,7 +63,7 @@ public interface PurpleBoxUserInterface {
 	  /**
 	   * Return products.
 	   *
-	   * @return the array list
+	   * @return ArrayList<Product>
 	   */
 	   public ArrayList<Product> returnProduct();
 
@@ -77,27 +78,27 @@ public interface PurpleBoxUserInterface {
 	  /**
 	   * Sort ArrayList<Product> alphabetically by name.
 	   *
-	   * @param ArrayList<Product> productList
+	   * @param ArrayList<Product> allProducts
 	   *
-	   * @ensure the product list sorted alphabetically by name.
+	   * @ensure ArrayList<Product> allProducts sorted alphabetically by name.
 	   */
 	   public void sortByName(ArrayList<Product> allProducts);
 	
 	  /**
 	   * Sort ArrayList<Product> chronologically by releaseDate.
 	   *
-	   * @param ArrayList<Product> productList
+	   * @param ArrayList<Product> allProducts
 	   *
-	   * @ensure the product list sorted chronologically by releaseDate.
+	   * @ensure ArrayList<Product> allProducts sorted chronologically by releaseDate.
 	   */
 	   public void sortByReleaseDate(ArrayList<Product> allProducts);
 	
 	  /**
 	   * Sort ArrayList<Product> numerically by metaScore.
 	   *
-	   * @param ArrayList<Product> productList
+	   * @param ArrayList<Product> allProducts
 	   *
-	   * @ensure the product list sorted numerically by metaScore.
+	   * @ensure the ArrayList<Product> allProducts sorted numerically by metaScore.
 	   */
 	   public void sortByMetaScore(ArrayList<Product> allProducts);
 	
@@ -107,7 +108,7 @@ public interface PurpleBoxUserInterface {
 	   * @param String name
 	   * @param ArrayList<Product>
 	   *
-	   * @returns the found product object.
+	   * @return the found Product object.
 	   */
 	   public Product searchByName(ArrayList<Product> allProducts, String name);
 	
@@ -117,37 +118,37 @@ public interface PurpleBoxUserInterface {
 	   * @param String genre
 	   * @param ArrayList<Product>
 	   *
-	   * @return a list of products of the desired genre
+	   * @return ArrayList<Product> of the desired genre.
 	   */
 	   public ArrayList<Product> searchByGenre(ArrayList<Product> allProducts, String genre);
 		   
           /**
-	   * Search for product within ArrayList<Product> by format.
+	   * Search for Product within ArrayList<Product> by format.
 	   *
 	   * @param String format
 	   * @param ArrayList<Product>
 	   *
-	   * @return a list of products of the desired format.
+	   * @return ArrayList<Product> of the desired format.
 	   */
 	   public ArrayList<Product> searchByFormat(ArrayList<Product> allProducts, String format);
 	
           /**
-	   * Search for product within ArrayList<Product> by releaseDate.
+	   * Search for Product within ArrayList<Product> by releaseDate.
 	   *
 	   * @param String releaseDate
 	   * @param Node root
 	   *
-	   * @return a list of products of the desired releaseDate.
+	   * @return ArrayList<Product> of the desired releaseDate.
 	   */
 	   public ArrayList<Product> searchByReleaseDate(ArrayList<Product> allProducts, String releaseDate);
 		   
 	  /**
-	   * Search for product within ArrayList<Product> by  metaScore.
+	   * Search for Product within ArrayList<Product> by metaScore.
 	   *
 	   * @param int metaScore
 	   * @param ArrayList<Product>
 	   *
-	   * @return ArrayList<Product> of products of the desired metaScore.
+	   * @return ArrayList<Product> of the desired metaScore.
 	   */
 	   public ArrayList<Product> searchByMetaScore(ArrayList<Product> allProducts, int metaScore);
 		   
