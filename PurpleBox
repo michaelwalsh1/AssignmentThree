@@ -36,10 +36,18 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 		return 0;
 	}
 
-	public ArrayList<Product> sortByProductName(ArrayList<Product> allProducts, String name) {
-		return null;
+	public void sortByName(ArrayList<Product> allProducts) {
+		
 	}
 
+	public void sortByReleaseDate(ArrayList<Product> allProducts) {
+		
+	}
+	
+	public void sortByMetaScore(ArrayList<Product> allProducts) {
+		
+	}
+	
 	public Product searchByName(ArrayList<Product> allProducts, String name) {
 		return null;
 	}
