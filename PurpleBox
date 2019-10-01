@@ -49,82 +49,69 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 	}
 	
 	public Product searchByName(ArrayList<Product> allProducts, String name) {
-	
-	for(Product info: allProducts) {
-        	System.out.println(info.getName());
+		for(Product info: allProducts) {
+        		System.out.println(info.getName());
         	}
 	
 	}
 
 	public ArrayList<Product> searchByGenre(ArrayList<Product> allProducts, String genre) {
-	
-	for(Product info: allProducts) {
-        	System.out.println(info.getGenre());
+		for(Product info: allProducts) {
+        		System.out.println(info.getGenre());
         	}
 		return null;
 	}
 
 	public ArrayList<Product> searchByFormat(ArrayList<Product> allProducts, String format) {
-	
-	for(Product info: allProducts) {
-        	System.out.println(info.getFormat());
+		for(Product info: allProducts) {
+        		System.out.println(info.getFormat());
         	}
 		return null;
 	}
 
 	public ArrayList<Product> searchByReleaseDate(ArrayList<Product> allProducts, String releaseDate) {
-	
-	for(Product info: allProducts) {
-        	System.out.println(info.getReleaseDate());
+		for(Product info: allProducts) {
+        		System.out.println(info.getReleaseDate());
         	}
 		return null;
 	}
 
 	public ArrayList<Product> searchByMetaScore(ArrayList<Product> allProducts, int metaScore) {
-	
-	for(Product info: allProducts) {
-        	System.out.println(info.getMetaScore());
+		for(Product info: allProducts) {
+        		System.out.println(info.getMetaScore());
         	}
 		return null;
 	}
 
 	public void addProductToInventory(Product someProduct) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public boolean removeProductFromInventory(Product someProduct) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	public void removeAllFromInventory() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void changePrice(Product product, double newPrice) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void setVolumeDiscount(double discount) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void setPromoCodes(ArrayList<String> codes) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void disableUnit() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void enableUnit() {
-		// TODO Auto-generated method stub
 		
 	}
 
