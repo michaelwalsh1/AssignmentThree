@@ -67,24 +67,6 @@ public interface PurpleBoxUserInterface {
 	   * @return double totalCost
 	   */
 	   public double applyPromoCode(double totalCost, String code);
-
-	  /**
-	   * View all Movie Products.
-	   *
-	   * @param ArrayList<Product> allProducts
-	   *
-	   * @return ArrayList<Product> of format 'dvd' or 'bluray'
-	   */
-	   public ArrayList<Product> viewAllMovies(ArrayList<Product> allProducts);
-	
-	  /**
-	   * View all Game Products.
-	   *
-	   * @param ArrayList<Product> allProducts
-	   *
-	   * @return ArrayList<Product> of format 'ps4' or 'xbox'
-	   */
-	   public ArrayList<Product> viewAllGames(ArrayList<Product> allProducts);
 	
 	  /**
 	   * Sort ArrayList<Product> alphabetically by name.
@@ -112,6 +94,24 @@ public interface PurpleBoxUserInterface {
 	   * @ensure the ArrayList<Product> allProducts sorted numerically by metaScore.
 	   */
 	   public void sortByMetaScore(ArrayList<Product> allProducts);
+	
+	  /**
+	   * View all Movie Products.
+	   *
+	   * @param ArrayList<Product> allProducts
+	   *
+	   * @return ArrayList<Product> of format 'dvd' or 'bluray'
+	   */
+	   public ArrayList<Product> viewAllMovies(ArrayList<Product> allProducts);
+	
+	  /**
+	   * View all Game Products.
+	   *
+	   * @param ArrayList<Product> allProducts
+	   *
+	   * @return ArrayList<Product> of format 'ps4' or 'xbox'
+	   */
+	   public ArrayList<Product> viewAllGames(ArrayList<Product> allProducts);
 	
 	  /**
 	   * Search for product within ArrayList<Product> by name.
