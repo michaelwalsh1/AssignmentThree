@@ -45,7 +45,7 @@ public interface PurpleBoxUserInterface {
 	   public boolean isProductAvailable(Product someMovie);
 
 	   /**
-	   * Checkout products from User's cart.
+	   * Checkout Products from User's cart.
 	   *
 	   * @param ArrayList<Product> cart
 	   * 
@@ -59,14 +59,7 @@ public interface PurpleBoxUserInterface {
 	   * @param getPaymentInformation
 	   */
 	   public void makePayment(String method);
-
-	  /**
-	   * Return products.
-	   *
-	   * @return ArrayList<Product>
-	   */
-	   public ArrayList<Product> returnProduct();
-
+	
 	  /**
 	   * Apply promo code.
 	   *
@@ -74,6 +67,24 @@ public interface PurpleBoxUserInterface {
 	   * @return double totalCost
 	   */
 	   public double applyPromoCode(double totalCost, String code);
+
+	  /**
+	   * View all Movie Products.
+	   *
+	   * @param ArrayList<Product> allProducts
+	   *
+	   * @return ArrayList<Product> of format 'dvd' or 'bluray'
+	   */
+	   public ArrayList<Product> viewAllMovies(ArrayList<Product> allProducts);
+	
+	  /**
+	   * View all Game Products.
+	   *
+	   * @param ArrayList<Product> allProducts
+	   *
+	   * @return ArrayList<Product> of format 'ps4' or 'xbox'
+	   */
+	   public ArrayList<Product> viewAllGames(ArrayList<Product> allProducts);
 	
 	  /**
 	   * Sort ArrayList<Product> alphabetically by name.
