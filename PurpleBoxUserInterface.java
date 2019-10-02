@@ -39,6 +39,7 @@ public interface PurpleBoxUserInterface {
 	   * Checks if product is available.
 	   *
 	   * @param Product someProduct
+	   * 
 	   * @return boolean, if someProduct is available
 	   * @ensure result == (true || false)
 	   */
@@ -147,7 +148,7 @@ public interface PurpleBoxUserInterface {
 	   * Search for Product within ArrayList<Product> by releaseDate.
 	   *
 	   * @param String releaseDate
-	   * @param Node root
+	   * @param ArrayList<Product>
 	   *
 	   * @return ArrayList<Product> of the desired releaseDate.
 	   */
