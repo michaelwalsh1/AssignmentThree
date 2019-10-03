@@ -230,6 +230,16 @@ public class PurpleBoxTestMain implements  {
 							changeDVDPrice();
 						break;
 					case 5: //change prices games
+						String format1 = "xbox";
+						String format2 = "ps4";
+						System.out.println("Please enter the new price for games");
+						double newGamesPrice = console.nextDouble();
+						for(i=0; i< allProducts.length(); i++) {
+							if i.getMediaType.equals(format1)|| i.getMediaType.equals(format2)) {
+								i.setPrice(newGamesPrice);
+						}
+						changeGamesPrice();
+						
 						break;
 					case 6: //volume discount
 						break;
