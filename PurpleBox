@@ -102,6 +102,34 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 		
 	}
 
+	public double changeDVDPrice(ArrayList<Product> allProducts, double newDVDPrice) {
+							String format = "dvd";
+		for(i=0; i< allProducts.length(); i++) {
+			if i.getMediaType.equals(format)) {
+				i.setPrice(newDVDPrice);
+			}
+		}
+	}
+						
+	public double ChangeBlu-RayPrice(ArrayList<Product> allProducts, double newBlu-RayPrice) {
+		String format = "blu-ray";
+		for(i=0; i< allProducts.length(); i++) { 
+			if i.getMediaType.equals(format)) {
+				i.setPrice(newBlu-RayPrice);
+			}
+		}
+	}
+	
+	public double changeGamesPrice(ArrayList<Product> allProducts, double newGamesPrice) {
+		String format1 = "xbox";
+		String format2 = "ps4"
+		for(i=0; i< allProducts.length(); i++) { 
+			if i.getMediaType.equals(format1)|| i.getMediaType.equals(format2)) {
+				i.setPrice(newGamesPrice);
+			}
+		}
+	} 
+	
 	public void setVolumeDiscount(double discount) {
 		
 	}

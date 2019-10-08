@@ -179,100 +179,76 @@ public class PurpleBoxTestMain implements  {
 					case 1: //add to inventory
 					
 					
-					System.out.println("Please enter title:");
-					String name  = console.nextLine();
+						System.out.println("Please enter title:");
+						String name  = console.nextLine();
 					
-					System.out.println("Please enter genre:");
-					String genre  = console.nextLine();
+						System.out.println("Please enter genre:");
+						String genre  = console.nextLine();
 					
-					System.out.println("Please enter media type:");
-					String mediaType  = console.nextLine();
+						System.out.println("Please enter media type:");
+						String mediaType  = console.nextLine();
 					
-					System.out.println("Please enter release date:");
-					String releaseDate  = console.nextLine();
+						System.out.println("Please enter release date:");
+						String releaseDate  = console.nextLine();
 					
-					System.out.println("Please enter metascore:");
-					int metaScore  = console.nextLine();
+						System.out.println("Please enter metascore:");
+						int metaScore  = console.nextLine();
 					
-					System.out.println("Please enter price:");
-					double price  = console.nextLine();
+						System.out.println("Please enter price:");
+						double price  = console.nextLine();
 					
-					boolean isAvailable = true;
+						boolean isAvailable = true;
 					
-					ArrayList<Product> addToInventory = new Product(name, genre, mediaType, releaseDate, metaScore, price, isAvailable);
+						ArrayList<Product> addToInventory = new Product(name, genre, mediaType, releaseDate, metaScore, price, isAvailable);
 					
 						break;
+						
 					case 2: //remove from inventory
 						System.out.println("Please enter the name of the product you wish to remove from inventory:");
 						Product someProduct = searchByName(ArrayList<Product> allProducts, String name);
 						removeProductFromInventory(someProduct);
 						break;
+						
 					case 3: //change prices dvd
 						System.out.println("Please enter the new price for DVDs");
 						double newDVDPrice = console.nextDouble();
-						/*changeDVDPrice(allProducts, newDVDPrice); 
-						public double changeDVDPrice(ArrayList<Product> allProducts, double newDVDPrice) {
-							String format = "dvd";
-							for(i=0; i< allProducts.length(); i++) {
-								if i.getMediaType.equals(format)) {
-									i.setPrice(newDVDPrice);
-								}
-						}  											Option1 Split change price into 3 easy methods
-						*/
-						//changePrice(allProducts, newDVDPrice);    Option2 use changePrice for all 3 but have 1 harder method
+						changeDVDPrice(allProducts, newDVDPrice); 											
 						System.out.println("The price of all DVDs has been set to: $" + newDVDPrice);
 						break;
 						
 					case 4: //change prices blu-ray
-						System.out.println("Please enter the new price for Blu-rays");
+						System.out.println("Please enter the new price for Blu-Rays");
 						double newBlu-RayPrice = console.nextDouble();
-						/*changeBlu-RayPrice(allProducts, newBlu-RayPrice); 
-						public double ChangeBlu-RayPrice(ArrayList<Product> allProducts, double newBlu-RayPrice) {
-							String format = "blu-ray";
-							for(i=0; i< allProducts.length(); i++) { //make this for loop into its own method
-								if i.getMediaType.equals(format)) {
-									i.setPrice(newBlu-RayPrice);
-								}
-						} 													Option1 Split change price into 3 easy methods
-						*/
-						//changePrice(allProducts, newBlu-RayPrice);        Option2 use changePrice for all 3 but harder method to write
+						changeBlu-RayPrice(allProducts, newBlu-RayPrice); 
 						System.out.println("The price of all Blu-Rays has been set to: $" + newBlu-RayPrice);
 						break;
 						
 					case 5: //change prices games
 						System.out.println("Please enter the new price for games");
 						double newGamesPrice = console.nextDouble();
-						/*changeGamesPrice(allProducts, newGamesPrice);
-						public double changeGamesPrice(ArrayList<Product> allProducts, double newGamesPrice) {
-							String format1 = "xbox";
-							String format2 = "ps4"
-							for(i=0; i< allProducts.length(); i++) { //make this for loop into its own method changeGamePrices(arrayList, format1, format2)
-								if i.getMediaType.equals(format1)|| i.getMediaType.equals(format2)) {
-									i.setPrice(newGamesPrice);
-								}
-								System.out.print("The new price for games is: " + newPrice);
-						} 
-						*/
-						//changePrice(allProducts, newGamesPrice);
+						changeGamesPrice(allProducts, newGamesPrice);
 						System.out.println("The price of all gamess has been set to: $" + newGamePrice);
-						
 						break;
+						
 					case 6: //volume discount
 						System.out.println("Please enter the volume discount you would like to set");
 						double newVolumeDiscount = console.nextDouble();
 						setVolumeDiscount(newVolumeDiscount);
 						System.out.println(newVolumeDiscount + " has been set as the new volume discount");
 						break;
+						
 					case 7: //add promo code
 						System.out.println("Please enter a new promo code");
 						String newCode = console.nextln();
 						setPromoCodes(ArrayList<String> codes);
 						System.out.println(newCode + " has been added to the list of promo codes");
 						break;
+						
 					case 8: //enable unit
 						enableUnit();
 						System.out.println("Unit has been enabled.");
 						break;
+						
 					case 9: //disable unit
 						disableUnit();
 						System.out.println("Unit has been disabled.");

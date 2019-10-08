@@ -24,15 +24,30 @@ public interface PurpleBoxAdminInterface {
 	* @ensure all Products removed from ArrayList<Product>.
 	*/
 	public void removeAllFromInventory();
-
 	
 	/**
-	* This method allows the admin to change the price of any Product.
+	* This method allows the admin to change the price of any DVD Product.
+	*
+	* @param ArrayList<Product> of all Products.
+	* @param DVD price to be changed.
+	*/
+	public void changeDVDPrice(ArrayList<Product>, double newDVDPrice);
+	
+	/**
+	* This method allows the admin to change the price of any Blu-Ray Product.
+	*
+	* @param ArrayList<Product> of all Products.
+	* @param Blu-Ray price to be changed.
+	*/
+	public void changeBlu-RayPrice(ArrayList<Product>, double newBlu-RayPrice);
+	
+	/**
+	* This method allows the admin to change the price of any Game Product.
 	*
 	* @param ArrayList<Product> of all Products.
 	* @param Game price to be changed.
 	*/
-	public void changePrice(Product product, double newPrice);
+	public void changeGamePrice(ArrayList<Product>, double newGamePrice);
 	
 	/**
 	* This method allows the admin to make set the volume discount.
