@@ -61,7 +61,7 @@ public interface PurpleBoxAdminInterface {
 	*
 	* @param ArrayList<String> of promo codes.
 	*/
-	public void setPromoCodes(ArrayList<String> codes);
+	public void setPromoCodes(String codes);
 	
 	/**
 	* This method allows the admin to disable the entire unit.
