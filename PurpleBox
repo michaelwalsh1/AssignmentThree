@@ -134,7 +134,7 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 		
 	}
 
-	public void setPromoCodes(ArrayList<String> codes) {
+	public void setPromoCodes(String codes) {
 		
 	}
 
