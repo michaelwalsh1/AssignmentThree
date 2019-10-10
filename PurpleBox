@@ -139,11 +139,19 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 	}
 
 	public void disableUnit() {
-		
+		isPurpleBoxDisabled = true;
 	}
 
 	public void enableUnit() {
-		
+		isPurpleBoxDisabled = false;
+	}
+	
+	public boolean checkUnitStatus(boolean isPurpleBoxDisabled){
+		if(isPurpleBoxDisabled = true) {
+			return true;
+			System.out.println("Unit disabled. Try again later.");
+		}
+		return false;
 	}
 
 }
