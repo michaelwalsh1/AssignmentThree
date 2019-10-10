@@ -192,6 +192,92 @@ public class PurpleBoxTestMain {
 				case 0:  //Admin menu
 					userInput = -1;
 					
+					printAdminMenu();
+					
+					System.out.print("Make a selection: ");
+					userInput = console.nextInt();
+					
+					switch(userInput) {
+						case 1: //add to inventory
+							console.nextLine();
+							
+							System.out.print("Please enter title: ");
+							String name  = console.nextLine();
+							
+							System.out.print("Please enter genre: ");
+							String genre  = console.nextLine();
+							
+							System.out.print("Please enter media type: ");
+							String mediaType  = console.nextLine();
+							
+							System.out.print("Please enter release date: ");
+							String releaseDate  = console.nextLine();
+							
+							System.out.print("Please enter metascore: ");
+							int metaScore  = console.nextInt();
+							
+							System.out.print("Please enter price: ");
+							double price  = console.nextDouble();
+							
+							boolean isAvailable = true;
+							
+							allProducts.add(new Product(name, genre, mediaType, releaseDate, metaScore, price, isAvailable));
+							
+							break;
+							
+						case 2: //remove from inventory
+							System.out.println("Please enter the name of the product you wish to remove from inventory:");
+							String searchName = console.next();
+							Product someProduct = purpleBox.searchByName(allProducts, searchName);
+							purpleBox.removeProductFromInventory(someProduct);
+							break;
+							
+						case 3: //change prices dvd
+							System.out.println("Please enter the new price for DVDs");
+							double newDVDPrice = console.nextDouble();
+							purpleBox.changeDVDPrice(allProducts, newDVDPrice); 											
+							System.out.println("The price of all DVDs has been set to: $" + newDVDPrice);
+							break;
+							
+						case 4: //change prices blu-ray
+							System.out.println("Please enter the new price for Blu-Rays");
+							double newBluRayPrice = console.nextDouble();
+							purpleBox.changeBluRayPrice(allProducts, newBluRayPrice); 
+							System.out.println("The price of all Blu-Rays has been set to: $" + newBluRayPrice);
+							break;
+							
+						case 5: //change prices games
+							System.out.println("Please enter the new price for games");
+							double newGamePrice = console.nextDouble();
+							purpleBox.changeGamePrice(allProducts, newGamePrice);
+							System.out.println("The price of all gamess has been set to: $" + newGamePrice);
+							break;
+							
+						case 6: //volume discount
+							System.out.println("Please enter the volume discount you would like to set");
+							double newVolumeDiscount = console.nextDouble();
+							purpleBox.setVolumeDiscount(newVolumeDiscount);
+							System.out.println(newVolumeDiscount + " has been set as the new volume discount");
+							break;
+							
+						case 7: //add promo code
+							System.out.println("Please enter a new promo code");
+							String newCode = console.next();
+							purpleBox.setPromoCodes(newCode);
+							System.out.println(newCode + " has been added to the list of promo codes");
+							break;
+							
+						case 8: //enable unit
+							purpleBox.enableUnit();
+							System.out.println("Unit has been enabled.");
+							break;
+							
+						case 9: //disable unit
+							purpleBox.disableUnit();
+							System.out.println("Unit has been disabled.");
+							break;
+						
+					}
 					break;
 					
 			} //end mainMenu switch
@@ -234,7 +320,15 @@ public class PurpleBoxTestMain {
 	
 	public static void printAdminMenu() {
 		System.out.println("Admin Menu\n"
-				+ "\n");
+				+ "1 -- Add movie to inventory\n"
+				+ "2 -- Remove movie from inventory\n"
+				+ "3 -- Change prices for DVDs\n"
+				+ "4 -- Change prices for Blu-rays\n"
+				+ "5 -- Change prices for all games\n"
+				+ "6 -- Add Volume discount\n"
+				+ "7 -- Add Promo Code\n"
+				+ "8 -- Enable Unit\n"
+				+ "9 -- Disable Unit\n");
 	}
 	
 	public static void makeSelectionMenu(ArrayList<Product> productList, ArrayList<Product> cart, PurpleBox purpleBox) {
@@ -352,5 +446,4 @@ public class PurpleBoxTestMain {
 	}
 	
 }
-
 
