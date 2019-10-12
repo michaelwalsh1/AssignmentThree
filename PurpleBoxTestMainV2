@@ -149,13 +149,13 @@ public class PurpleBoxTestMain {
 						userInput = -1;
 
 						// call PurpleBox's searchByGenre() method
-						listByGenre = purpleBox.searchByReleaseDate(allMovies, releaseDate);
+						listByDate = purpleBox.searchByReleaseDate(allMovies, releaseDate);
 
 						makeSelectionMenu(listByDate, cart, purpleBox);
 						break;
 					case 6: // search by meta score
 						userInput = -1;
-						String metaScore = "";
+						int metaScore = 0;
 						ArrayList<Product> listByMetaScore = new ArrayList<Product>();
 
 						System.out.println("Which genre are you looking for?\n" + "  1 -- 1" + "  2 -- 2\n"
@@ -183,7 +183,7 @@ public class PurpleBoxTestMain {
 						userInput = -1;
 
 						// call PurpleBox's searchByGenre() method
-						listByGenre = purpleBox.searchByReleaseDate(allMovies, metaScore);
+						listByMetaScore = purpleBox.searchByMetaScore(movieList, metaScore);
 
 						makeSelectionMenu(listByMetaScore, cart, purpleBox);
 						break;
@@ -210,19 +210,12 @@ public class PurpleBoxTestMain {
 					makeSelectionMenu(gameList, cart, purpleBox);
 					break;
 				case 2: // search by name
-					/*
 					userInput = -1;
-					int searchedMovie = purpleBox.searchByName(allProducts, productName);
-
-					if (searchedMovie == 99) {
-						System.out.print("Fail");
-						break;
-					}
-
-					System.out.println("" + movieList.get(searchedMovie));
-					System.out.println("\n" + searchedMovie);
-					*/
-					break;
+					String productName = "";
+					
+					purpleBox.searchByName(allProducts, productName);
+					
+				break;
 				case 3: // search by genre
 					userInput = -1;
 					String genre = "";
@@ -276,7 +269,7 @@ public class PurpleBoxTestMain {
 					userInput = -1;
 
 					// call PurpleBox's searchByFormat() method
-					listByFormat = purpleBox.searchByFormat(allGames, format);
+					listByFormat = purpleBox.searchByFormat(gameList, format);
 
 					makeSelectionMenu(listByFormat, cart, purpleBox);
 				case 5: // search by release date
@@ -306,13 +299,13 @@ public class PurpleBoxTestMain {
 					userInput = -1;
 
 					// call PurpleBox's searchByReleaseDate() method
-					listByGenre = purpleBox.searchByReleaseDate(allGames, releaseDate);
+					listByDate = purpleBox.searchByReleaseDate(gameList, releaseDate);
 
 					makeSelectionMenu(listByDate, cart, purpleBox);
 					break;
 				case 6: // search by meta score
 					userInput = -1;
-					String metaScore = "";
+					int metaScore = 0;
 					ArrayList<Product> listByMetaScore = new ArrayList<Product>();
 
 					System.out.println("Which genre are you looking for?\n" + "  1 -- 1" + "  2 -- 2\n" + "  3 -- 3\n"
@@ -340,7 +333,7 @@ public class PurpleBoxTestMain {
 					userInput = -1;
 
 					// call PurpleBox's searchByMetaScore() method
-					listByGenre = purpleBox.searchByReleaseDate(allGames, metaScore);
+					listByMetaScore = purpleBox.searchByMetaScore(gameList, metaScore);
 
 					makeSelectionMenu(listByMetaScore, cart, purpleBox);
 					break;
@@ -350,7 +343,7 @@ public class PurpleBoxTestMain {
 				break;
 
 			case 3: // Return movie/game
-				makeReturnMenu(allProducts, cart, purpleBox);
+				//makeReturnMenu(allProducts, cart, purpleBox);
 				break;
 
 			case 0: // Admin menu
@@ -471,7 +464,7 @@ public class PurpleBoxTestMain {
 				+ "8 -- Enable Unit\n" + "9 -- Disable Unit\n");
 	}
 
-	public static void makeSelectionMenu(ArrayList<Product> productList, ArrayList<Product> cart, PurpleBox purpleBox) {
+	public static void makeSelectionMenu(ArrayList<Product> allProducts, ArrayList<Product> cart, PurpleBox purpleBox) {
 
 		boolean flag = false;
 		char userInput;
@@ -481,7 +474,7 @@ public class PurpleBoxTestMain {
 		while (true) { // 1st while loop
 			while (flag == false) { // 2nd while loop
 				// print list of products
-				System.out.println(productList);
+				System.out.println(allProducts);
 
 				System.out.print("\nDid you find what you were looking for?\n" + "Type 'Y' for 'Yes', 'N' for 'No': ");
 				userInput = console.next().charAt(0);
@@ -492,9 +485,9 @@ public class PurpleBoxTestMain {
 						someTitle = console.next();
 
 						// search productList for someTitle
-						for (int i = 0; i < productList.size(); i++) {
-							if (productList.get(i).getName().equalsIgnoreCase(someTitle)) {
-								foundProduct = productList.get(i);
+						for (int i = 0; i < allProducts.size(); i++) {
+							if (allProducts.get(i).getName().equalsIgnoreCase(someTitle)) {
+								foundProduct = allProducts.get(i);
 
 								System.out.println("\nFound it!\n\n" + foundProduct);
 								System.out.print("Add to cart?\n" + "Type 'Y' for 'Yes', 'N' for 'No': ");
@@ -506,7 +499,7 @@ public class PurpleBoxTestMain {
 								}
 							}
 						} // end for loop
-
+						
 						if (foundProduct == null) {
 							System.out.println("\nOops! Title not found.\n");
 						}
@@ -538,7 +531,7 @@ public class PurpleBoxTestMain {
 		} // end 1st while loop
 
 	}
-	
+/*
 	public static void makeReturnMenu(ArrayList<Product> cart, ArrayList<Product> productList, PurpleBox purpleBox) {
 
 		boolean flag = false;
@@ -583,7 +576,7 @@ public class PurpleBoxTestMain {
 
 		} // end 1st while loop
 
-	
+*/
 
 	public static ArrayList<Product> createProductList() {
 
