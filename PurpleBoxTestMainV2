@@ -17,6 +17,7 @@ public class PurpleBoxTestMain {
 		ArrayList<Product> allProducts = createProductList();
 		ArrayList<Product> cart = new ArrayList<Product>();
 		ArrayList<Product> movieList = createMovieList(allProducts);
+		ArrayList<Product> gameList = createGameList(allProducts);
 
 		while (mainFlag == false) {
 			// call printMainMenu() method
@@ -190,14 +191,14 @@ public class PurpleBoxTestMain {
 						userInput = -1;
 						movieFlag = true;
 						break;
-
-					} // end movieMenu switch
-				} // end Movie while loop
-
+					}
+				} // end movieMenu switch
+				
+			case 2:
 				userInput = -1; // reset userInput
 				ArrayList<Product> allGames = new ArrayList<Product>();
 				allGames = purpleBox.viewAllGames(allProducts);
-
+				allGames = gameList;
 				printGameMenu();
 
 				System.out.print("Make selection, 1-6: ");
@@ -206,7 +207,7 @@ public class PurpleBoxTestMain {
 				switch (userInput) { // game menu cases
 				case 1: // view all games
 					userInput = -1;
-					makeSelectionMenu(allGames, cart, purpleBox);
+					makeSelectionMenu(gameList, cart, purpleBox);
 					break;
 				case 2: // search by name
 					/*
@@ -359,7 +360,8 @@ public class PurpleBoxTestMain {
 
 				System.out.print("Make a selection: ");
 				userInput = console.nextInt();
-
+				
+				} // end Movie while loop
 				switch (userInput) {
 				case 1: // add to inventory
 					console.nextLine();
@@ -442,7 +444,7 @@ public class PurpleBoxTestMain {
 
 				}
 			}
-		}
+		
 	} // end mainMenu switch
 
 	public static void printMainMenu() {
