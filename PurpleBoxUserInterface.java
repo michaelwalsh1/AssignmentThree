@@ -62,9 +62,10 @@ public interface PurpleBoxUserInterface {
 	   public void makePayment(String method);
 	
 	  /**
-	   * Apply promo code.
-	   *
+	   * Applies promo code to cart total and returns new total.
+	   * @param double totalCost
 	   * @param String code
+	   * 
 	   * @return double totalCost
 	   */
 	   public double applyPromoCode(double totalCost, String code);
