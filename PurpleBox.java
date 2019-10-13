@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterface {
+public abstract class PurpleBox implements UserInterface, AdminInterface {
 
     Scanner console = new Scanner(System.in);
 
@@ -15,12 +15,10 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 
     }
 
-    @Override
     public void addToCart(ArrayList<Product> cart, Product someProduct) {
         cart.add(someProduct);
     }
 
-    @Override
     public void removeFromCart(ArrayList<Product> cart, Product someProduct) {
         for (int i = 0; i < cart.size(); i++) {
             if (cart.get(i) == someProduct) {
@@ -30,12 +28,10 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
         }
     }
 
-    @Override
     public void emptyCart(ArrayList<Product> cart) {
         cart.clear();
     }
 
-    @Override
     public boolean isProductAvailable(Product someProduct) {
         if (someProduct.getIsAvailable() == true) {
             return true;
@@ -44,7 +40,7 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
         }
     }
 
-    @Override
+    /*
     public void checkout(ArrayList<Product> cart) throws Exception {
         int userInput = -1;
         double totalCost = 0;
@@ -90,13 +86,11 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
         makePayment(method);
 
     }
-
-    @Override
+    */
     public void makePayment(String method) {
 
     }
 
-    @Override
     public double applyPromoCode(double totalCost, String code) {
 
         return 0;
@@ -226,12 +220,10 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
         return false;
     }
 
-    @Override
     public void changeBluRayPrice(ArrayList<Product> bluRayList, double newBluRayPrice) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
     public void changeGamePrice(ArrayList<Product> gameList, double newGamePrice) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
