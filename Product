@@ -1,5 +1,3 @@
-package com.David.maven.PurpleBox;
-
 import java.util.ArrayList;
 
 public class Product  {
@@ -13,7 +11,7 @@ public class Product  {
 
 	
 
-	public Product(String name, String genre, String discType, String releaseDate, int metaScore, double price, boolean isAvailable) {
+	public Product(String name, String genre, String mediaType, String releaseDate, int metaScore, double price, boolean isAvailable) {
 		this.name = name;
 		this.genre = genre;
 		this.mediaType = mediaType;
@@ -124,7 +122,7 @@ public class Product  {
 	 * @param boolean isAvailable
 	 */
 	public void setIsAvailable(boolean isAvailable) {
-
+               isAvailable = true;
 	}
 
 	/**
@@ -158,6 +156,5 @@ public class Product  {
 				+ "/n--------------------------------------------");
 		return toString();
 	}
-
 	
 }
