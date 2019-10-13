@@ -22,6 +22,7 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 
     @Override
     public void removeFromCart(ArrayList<Product> cart, Product someProduct) {
+// Change i to ix or even index for more clarity.
         for (int i = 0; i < cart.size(); i++) {
             if (cart.get(i) == someProduct) {
                 cart.remove(i);
@@ -37,6 +38,12 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
 
     @Override
     public boolean isProductAvailable(Product someProduct) {
+// Consider replacing the existing 4 lines with the following:
+//   return someProduct.getIsAvailable();
+        
+// Whenever a method is down to one line, you should ask yourself whether the method is really providing
+// any value or whether they can simply run the command themselves.  There may be good justifications.  Just think
+// about it.
         if (someProduct.getIsAvailable() == true) {
             return true;
         } else {
@@ -48,6 +55,7 @@ public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterfac
     public void checkout(ArrayList<Product> cart) throws Exception {
         int userInput = -1;
         double totalCost = 0;
+// Consider naming this paymentMethod
         String method = "";
 
         for (int i = 0; i < cart.size(); i++) {
