@@ -8,7 +8,7 @@ public class PurpleBoxTestMain {
 
 	static Scanner console = new Scanner(System.in);
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		//variables
 		int userInput = -1;
@@ -44,7 +44,7 @@ public class PurpleBoxTestMain {
 					System.out.println("\n** Enter a number 0-4. **\n");
 					console.next();
 				} catch(Exception e) {
-					System.out.println("\n** Enter a number 0-4 **\n");
+					System.out.println("\n** Enter a number 0-4. **\n");
 				}
 			} while(true);
 			
@@ -74,10 +74,10 @@ public class PurpleBoxTestMain {
 								break;
 								
 							} catch(InputMismatchException e) {
-								System.out.println("\n** Enter a number 0-6. **\n");
+								System.out.println("\n** Enter a number 0-7. **\n");
 								console.next();
 							} catch(Exception e) {
-								System.out.println("\n** Enter a number 0-6. **\n");
+								System.out.println("\n** Enter a number 0-7. **\n");
 							}
 						} while(true);
 						
@@ -96,17 +96,35 @@ public class PurpleBoxTestMain {
 								//listByGenre = purpleBox.viewAllMovies(allProducts);
 								allMovies = movieList;
 								
-								System.out.println("Which genre are you looking for?\n"
-										+ "  1 -- Action\n"
-										+ "  2 -- Comedy\n"
-										+ "  3 -- Documentary\n"
-										+ "  4 -- Drama\n"
-										+ "  5 -- Family\n"
-										+ "  6 -- Horror\n"
-										+ "  7 -- Romance\n"
-										+ "  8 -- Sci-Fi\n");
-								System.out.print("Choose a number 1-8: ");
-								userInput = console.nextInt();
+								do {
+									try {
+										System.out.println("Which genre are you looking for?\n"
+												+ "  1 -- Action\n"
+												+ "  2 -- Comedy\n"
+												+ "  3 -- Documentary\n"
+												+ "  4 -- Drama\n"
+												+ "  5 -- Family\n"
+												+ "  6 -- Horror\n"
+												+ "  7 -- Romance\n"
+												+ "  8 -- Sci-Fi\n");
+										System.out.print("Choose a number 1-8: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 8) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-8. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-8. **\n");
+									}
+								} while(true);
 								
 								switch(userInput) {
 									case 1:
@@ -149,11 +167,29 @@ public class PurpleBoxTestMain {
 								//listByFormat = purpleBox.viewAllMovies(allProducts);
 								allMovies = movieList;
 								
-								System.out.println("Which disc format are you looking for?\n"
-										+ "  1 -- DVD\n"
-										+ "  2 -- Blu-Ray\n");
-								System.out.print("Choose a number 1-2: ");
-								userInput = console.nextInt();
+								do {
+									try {
+										System.out.println("Which disc format are you looking for?\n"
+												+ "  1 -- DVD\n"
+												+ "  2 -- Blu-Ray\n");
+										System.out.print("Choose a number 1-2: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 2) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-2. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-2. **\n");
+									}
+								} while(true);
 								
 								switch(userInput) {
 									case 1:
@@ -178,13 +214,31 @@ public class PurpleBoxTestMain {
 								//listByDate = purpleBox.viewAllMovies(allProducts);
 								allMovies = movieList;
 								
-								System.out.println("Which year are you looking for?\n"
-										+ "  1 -- 2016\n"
-										+ "  2 -- 2017\n"
-										+ "  3 -- 2018\n"
-										+ "  4 -- 2019\n");
-								System.out.print("Choose a number 1-4: ");
-								userInput = console.nextInt();
+								do {
+									try {
+										System.out.println("Which year are you looking for?\n"
+												+ "  1 -- 2016\n"
+												+ "  2 -- 2017\n"
+												+ "  3 -- 2018\n"
+												+ "  4 -- 2019\n");
+										System.out.print("Choose a number 1-4: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 4) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-4. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-4. **\n");
+									}
+								} while(true);
 
 								switch (userInput) {
 								case 1:
@@ -215,15 +269,33 @@ public class PurpleBoxTestMain {
 								//listByMetaScore = purpleBox.viewAllMovies(allProducts);
 								allMovies = movieList;
 								
-								System.out.println("Which score are you looking for?\n"
-										+ "  1 -- 1 Star\n"
-										+ "  2 -- 2 Stars\n"
-										+ "  3 -- 3 Stars\n"
-										+ "  4 -- 4 Stars\n"
-										+ "  5 -- 5 Stars\n");
-								System.out.print("Choose a number 1-5: ");
-								userInput = console.nextInt();
-
+								do {
+									try {
+										System.out.println("Which score are you looking for?\n"
+												+ "  1 -- 1 Star\n"
+												+ "  2 -- 2 Stars\n"
+												+ "  3 -- 3 Stars\n"
+												+ "  4 -- 4 Stars\n"
+												+ "  5 -- 5 Stars\n");
+										System.out.print("Choose a number 1-5: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 5) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-5. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-5. **\n");
+									}
+								} while(true);
+								
 								switch (userInput) {
 								case 1:
 									metaScore = 1;
@@ -247,6 +319,41 @@ public class PurpleBoxTestMain {
 								listByMetaScore = purpleBox.searchByMetaScore(allMovies, metaScore);
 
 								makeSelectionMenu(listByMetaScore, cart, purpleBox);
+								
+								break;
+							case 7:
+								userInput = -1;
+								viewCart(cart);
+								
+								do {
+									try {
+										System.out.println("What next\n"
+												+ "  1 -- Proceed to checkout\n"
+												+ "  2 -- Continue shopping\n");
+										System.out.println("Choose a number 1-2: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 2) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-2. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-2. **\n");
+									}
+								} while(true);
+								
+								//Proceed to checkout
+								if(userInput == 1) {
+									//purpleBox.checkout(cart);
+									movieFlag = true;
+								}
 								
 								break;
 							case 0:  //return to Main Menu
@@ -284,10 +391,10 @@ public class PurpleBoxTestMain {
 								break;
 								
 							} catch(InputMismatchException e) {
-								System.out.println("\n** Enter a number 0-6. **\n");
+								System.out.println("\n** Enter a number 0-7. **\n");
 								console.next();
 							} catch(Exception e) {
-								System.out.println("\n** Enter a number 0-6. **\n");
+								System.out.println("\n** Enter a number 0-7. **\n");
 							}
 						} while(true);
 						
@@ -307,13 +414,32 @@ public class PurpleBoxTestMain {
 								//listByGenre = purpleBox.viewAllMovies(allProducts);
 								allGames = gameList;
 								
-								System.out.println("Which genre are you looking for?\n"
-										+ "  1 -- FPS\n"
-										+ "  2 -- MMORPG\n"
-										+ "  3 -- Strategy\n"
-										+ "  4 -- Racing\n");
-								System.out.print("Choose a number 1-4: ");
-								userInput = console.nextInt();
+								do {
+									try {
+										System.out.println("Which genre are you looking for?\n"
+												+ "  1 -- FPS\n"
+												+ "  2 -- MMORPG\n"
+												+ "  3 -- Strategy\n"
+												+ "  4 -- Racing\n");
+										System.out.print("Choose a number 1-4: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 4) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-4. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-4. **\n");
+									}
+								} while(true);
+								
 								
 								switch (userInput) {
 								case 1:
@@ -342,11 +468,29 @@ public class PurpleBoxTestMain {
 								String format = "";
 								ArrayList<Product> listByFormat = new ArrayList<Product>();
 								
-								System.out.println("Which game platform are you looking for?\n"
-										+ "  1 -- Xbox\n"
-										+ "  2 -- PS4\n");
-								System.out.print("Choose a number 1-2: ");
-								userInput = console.nextInt();
+								do {
+									try {
+										System.out.println("Which game platform are you looking for?\n"
+												+ "  1 -- Xbox\n"
+												+ "  2 -- PS4\n");
+										System.out.print("Choose a number 1-2: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 2) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-2. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-2. **\n");
+									}
+								} while(true);
 								
 								switch (userInput) {
 								case 1:
@@ -369,13 +513,31 @@ public class PurpleBoxTestMain {
 								String releaseDate = "";
 								ArrayList<Product> listByDate = new ArrayList<Product>();
 								
-								System.out.println("Which year are you looking for?\n"
-										+ "  1 -- 2016\n"
-										+ "  2 -- 2017\n"
-										+ "  3 -- 2018\n"
-										+ "  4 -- 2019\n");
-								System.out.print("Choose a number 1-4: ");
-								userInput = console.nextInt();
+								do {
+									try {
+										System.out.println("Which year are you looking for?\n"
+												+ "  1 -- 2016\n"
+												+ "  2 -- 2017\n"
+												+ "  3 -- 2018\n"
+												+ "  4 -- 2019\n");
+										System.out.print("Choose a number 1-4: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 4) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-4. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-4. **\n");
+									}
+								} while(true);
 								
 								switch (userInput) {
 									case 1:
@@ -404,14 +566,32 @@ public class PurpleBoxTestMain {
 								int metaScore = 0;
 								ArrayList<Product> listByMetaScore = new ArrayList<Product>();
 								
-								System.out.println("Which score are you looking for?\n"
-										+ "  1 -- 1 Star\n"
-										+ "  2 -- 2 Stars\n"
-										+ "  3 -- 3 Stars\n"
-										+ "  4 -- 4 Stars\n"
-										+ "  5 -- 5 Stars\n");
-								System.out.print("Choose a number 1-5: ");
-								userInput = console.nextInt();
+								do {
+									try {
+										System.out.println("Which score are you looking for?\n"
+												+ "  1 -- 1 Star\n"
+												+ "  2 -- 2 Stars\n"
+												+ "  3 -- 3 Stars\n"
+												+ "  4 -- 4 Stars\n"
+												+ "  5 -- 5 Stars\n");
+										System.out.print("Choose a number 1-5: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 5) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-5. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-5. **\n");
+									}
+								} while(true);
 								
 								switch (userInput) {
 								case 1:
@@ -436,6 +616,41 @@ public class PurpleBoxTestMain {
 								listByMetaScore = purpleBox.searchByMetaScore(allGames, metaScore);
 								
 								makeSelectionMenu(listByMetaScore, cart, purpleBox);
+								
+								break;
+							case 7:
+								userInput = -1;
+								viewCart(cart);
+								
+								do {
+									try {
+										System.out.println("What next?\n"
+												+ "  1 -- Proceed to checkout\n"
+												+ "  2 -- Continue shopping\n");
+										System.out.println("Choose a number 1-2: ");
+										userInput = console.nextInt();
+										
+										if(userInput < 1 || userInput > 2) {
+											throw new Exception();
+										}
+										
+										System.out.println();
+										
+										break;
+										
+									} catch(InputMismatchException e) {
+										System.out.println("\n** Enter a number 1-2. **\n");
+										console.nextLine();
+									} catch(Exception e) {
+										System.out.println("\n** Enter a number 1-2. **\n");
+									}
+								} while(true);
+								
+								//Proceed to checkout
+								if(userInput == 1) {
+									//purpleBox.checkout(cart);
+									gameFlag = true;
+								}
 								
 								break;
 							case 0:  //return to Main Menu
@@ -622,6 +837,7 @@ public class PurpleBoxTestMain {
 				+ "  4 -- Search by Disc Type\n"
 				+ "  5 -- Search by Release Date\n"
 				+ "  6 -- Search by MetaScore\n"
+				+ "  7 -- View Cart\n"
 				+ "  0 -- Return to Main Menu\n");
 	}
 	
@@ -633,6 +849,7 @@ public class PurpleBoxTestMain {
 				+ "  4 -- Search by Disc Type\n"
 				+ "  5 -- Search by Release Date\n"
 				+ "  6 -- Search by MetaScore\n"
+				+ "  7 -- View Cart\n"
 				+ "  0 -- Return to Main Menu\n");
 	}
 	
@@ -827,6 +1044,10 @@ public class PurpleBoxTestMain {
 		}
 		
 		return gameList;
+	}
+	
+	public static void viewCart(ArrayList<Product> cart) {
+		System.out.println(cart + "\n");
 	}
 	
 }
