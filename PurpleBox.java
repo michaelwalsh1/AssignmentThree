@@ -1,34 +1,98 @@
 package com.David.maven.PurpleBox;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
-public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdminInterface {
+public class PurpleBox implements PurpleBoxUserInterface, PurpleBoxAdministratorInterface {
 
+	Scanner console = new Scanner(System.in);
+	
+	@Override
 	public void addToCart(ArrayList<Product> cart, Product someProduct) {
-		
+		cart.add(someProduct);
 	}
 
+	@Override
 	public void removeFromCart(ArrayList<Product> cart, Product someProduct) {
-		
+		for(int i = 0; i < cart.size(); i++) {
+			if(cart.get(i) == someProduct) {
+				cart.remove(i);
+				break;
+			}
+		}
 	}
-
+	
+	@Override
 	public void emptyCart(ArrayList<Product> cart) {
-		
+		cart.clear();
 	}
 
+	@Override
 	public boolean isProductAvailable(Product someProduct) {
-		return false;
+		if(someProduct.isAvailable() == true) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
-	public void checkout(ArrayList<Product> cart) {
+	@Override
+	public void checkout(ArrayList<Product> cart) throws Exception {
+		int userInput = -1;
+		double totalCost = 0;
+		String method = "";
+		
+		for(int i = 0; i < cart.size(); i++) {
+			totalCost += cart.get(i).getPrice();
+		}
+		
+		do {
+			try {
+				System.out.print("What's your payment method?\n"
+						+ "  1 -- Debit\n"
+						+ "  2 -- Credit\n");
+				System.out.print("Make a selection: ");
+				userInput = console.nextInt();
+				
+				if(userInput < 1 || userInput > 2) {
+					throw new Exception();
+				}
+				
+				System.out.println();
+				
+				break;
+				
+			} catch(InputMismatchException e) {
+				System.out.println("** Enter a number 1-2 **");
+				console.nextLine();
+			} catch(Exception e) {
+				System.out.println("** Enter a number 1-2 **");
+			}
+		} while(true);
+		
+		switch(userInput) {
+			case 1:
+				method = "debit";
+				break;
+			case 2:
+				method = "credit";
+				break;
+		}
+		
+		makePayment(method);
+		
 		
 	}
 
+	@Override
 	public void makePayment(String method) {
 		
 	}
-	
+
+	@Override
 	public double applyPromoCode(double totalCost, String code) {
+		
 		return 0;
 	}
 
